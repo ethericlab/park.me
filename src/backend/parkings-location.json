@@ -770,5 +770,23 @@
       "Shape_Length": 0.0011631108506341063,
       "Shape_Area": 1.1011621413497461e-8
     }
+  },
+  "2027": {
+    "geometry": {
+      "type": "Point",
+      "coordinates": [[15.345802149000065, 50.09874098700004]]
+    },
+    "properties": {
+      "ZPS_ID": "2026",
+      "owner": "Nikita K",
+      "address": "Mock address",
+      "pricing": {
+        "model": "hourly",
+        "price": 150,
+        "currency": "CZK"
+      },
+      "description": "First private parking in Prague",
+      "features": ["instant", "charge", "cam"]
+    }
   }
 }

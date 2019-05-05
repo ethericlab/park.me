@@ -41,7 +41,6 @@ const ParkingArea: FunctionComponent<Props> = ({
     const { coordinate, position } = event.nativeEvent
     onTap(id)
   }
-
   if (parkingType === ParkingType.PEER_TO_PEER) {
     return <Marker coordinate={coordinates[0]} onPress={handlePress} />
   }
@@ -55,7 +54,7 @@ const ParkingArea: FunctionComponent<Props> = ({
         onPress={handlePress}
         tappable
       />
-      <Marker coordinate={calculateMarkerPosition(coordinates)}>
+      <Marker coordinate={calculateMarkerPosition(coordinates)} cluster>
         <ImageBackground source={require('../../icons/ic_pin.png')} style={styles.marker}>
           <Text style={styles.markerText}>{numOfPlaces}</Text>
         </ImageBackground>
