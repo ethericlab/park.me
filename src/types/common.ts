@@ -26,7 +26,13 @@ export type Location = {
   lng: number
 }
 
-export type ParkingDetails = {
+export type PublicParking = {
+  type: 'public',
+  // ...args
+}
+
+export type PrivateParking = {
+  type: 'private',
   owner: ParkingSpotOwner,
   address: string,
   pricing: {
@@ -38,3 +44,5 @@ export type ParkingDetails = {
   features: Feature[],
   location: Location
 }
+
+export type ParkingPlace = PrivateParking | PublicParking

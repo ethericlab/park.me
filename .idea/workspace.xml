@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7549018c-9afb-4b79-ad4c-0e913af4f87f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MapView/MapView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/ic_pin_mixed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/ic_pin_p2p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/ic_pin_resident.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/modules.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainView/MainView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainView/MainView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ParkingArea/ParkingArea.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingArea/ParkingArea.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/ic_pin.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/common.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,6 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/types/common.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/react-native-maps/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MainView/MainView.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+            <state relative-caret-position="185">
+              <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
               <folding>
                 <element signature="e#65#114#0" expanded="true" />
               </folding>
@@ -49,19 +49,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MapView/MapView.tsx">
+        <entry file="file://$PROJECT_DIR$/src/views/SearchBar.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1243">
-              <caret selection-end-line="75" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/types/modules.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="319">
+              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
+            <state relative-caret-position="335">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -87,7 +81,6 @@
       <find>Core</find>
       <find>radius</find>
       <find>flex-wr</find>
-      <find>galano-</find>
       <find>galano-grotesque-alt-bold</find>
       <find>openState</find>
       <find>Galano Grotesque Alt DEMO</find>
@@ -98,6 +91,9 @@
       <find>Function</find>
       <find>Componen</find>
       <find>Subtract</find>
+      <find>galano-gro</find>
+      <find>Gala</find>
+      <find>galano-</find>
     </findStrings>
     <replaceStrings>
       <replace>Galano-Grotesque-Alt-DEMO</replace>
@@ -160,10 +156,10 @@
         <option value="$PROJECT_DIR$/src/components/DateRangeSelect/DateRangeSelect.tsx" />
         <option value="$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx" />
         <option value="$PROJECT_DIR$/src/containers/BookingContainer.tsx" />
-        <option value="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" />
-        <option value="$PROJECT_DIR$/src/types/common.ts" />
         <option value="$PROJECT_DIR$/src/types/modules.d.ts" />
         <option value="$PROJECT_DIR$/src/components/MainView/MainView.tsx" />
+        <option value="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" />
+        <option value="$PROJECT_DIR$/src/types/common.ts" />
       </list>
     </option>
   </component>
@@ -240,13 +236,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="MainView" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="park.me" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MapView" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
@@ -381,7 +370,7 @@
       <workItem from="1556977871832" duration="6235000" />
       <workItem from="1556986072284" duration="44000" />
       <workItem from="1556986127759" duration="8000" />
-      <workItem from="1556986140714" duration="40232000" />
+      <workItem from="1556986140714" duration="41278000" />
     </task>
     <task id="LOCAL-00001" summary="Add MainScreen and icons">
       <created>1557029550867</created>
@@ -411,11 +400,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557046052559</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;src/components/MapView/MapView.tsx">
+      <created>1557046609105</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557046609105</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix font">
+      <created>1557046742207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557046742207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46519000" />
+    <option name="totallyTimeSpent" value="47565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -428,7 +431,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32959184" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992126" weight="0.32244897" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992126" visible="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,7 +455,9 @@
     <MESSAGE value="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;App.tsx&#10;#&#9;tsconfig.json" />
     <MESSAGE value="Add types" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;src/components/MapView/MapView.tsx" />
+    <MESSAGE value="Fix font" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix font" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.editorconfig">
@@ -579,16 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
           <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/SearchBar.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,34 +800,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/types/common.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/types/modules.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="65" column="68" selection-start-line="65" selection-start-column="68" selection-end-line="65" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MapView/MapView.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1243">
-          <caret selection-end-line="75" selection-end-column="1" />
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -843,13 +814,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MapView/MapView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1243">
+          <caret selection-end-line="75" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/SearchBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainView/MainView.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        <state relative-caret-position="185">
+          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
           <folding>
             <element signature="e#65#114#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/common.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
         </state>
       </provider>
     </entry>
