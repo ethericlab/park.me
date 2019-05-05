@@ -30,17 +30,6 @@ const ICON_MAP = {
   [MIXED]: require('../../icons/ic_pin_mixed.png'),
   [RESIDENTS]: require('../../icons/ic_pin_resident.png')
 }
-
-const mapPolygons = getParkingPolygons(visibleParkings).map(parking => (
-  <Polygon
-    key={parking.id}
-    coordinates={parking.coordinates}
-    strokeColor={BORDER_COLOR_MAP[parking.parkingType]}
-    fillColor={FILL_COLOR_MAP[parking.parkingType]}
-    strokeWidth={1.5}
-    tappable
-  />
-))
 const markerStyles = StyleSheet.create({
   marker: {
     height: 51.5,
@@ -75,21 +64,6 @@ const markerOffset = {
   x: 0,
   y: -(markerStyles.marker.height / 2)
 }
-const mapMarkers = getParkingPolygons(visibleParkings).map(parking => (
-  <Marker
-    key={parking.id}
-    id={parking.id}
-    coordinate={calculateMarkerPosition(parking.coordinates)}
-    parkingType={parking.parkingType}
-    numOfPlaces={parking.numOfPlaces}
-    centerOffset={markerOffset}
-    cluster
-  >
-    <ImageBackground style={markerStyles.marker} source={ICON_MAP[parking.parkingType]}>
-      <Text style={markerTextStyles[parking.parkingType]}>{parking.numOfPlaces}</Text>
-    </ImageBackground>
-  </Marker>
-))
 
 function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
   const center = getCenter(coordinates)
@@ -97,8 +71,45 @@ function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
   return { latitude: Number(center.latitude), longitude: Number(center.longitude) }
 }
 
-class MapView extends React.Component {
+type Props = {
+  onParkingSelect: () => void
+}
+
+class MapView extends React.Component<Props> {
+  handleParkingSelect = parking => event => {
+    this.props.onParkingSelect(parking)
+  }
+
   render() {
+    const mapMarkers = getParkingPolygons(visibleParkings).map(parking => (
+      <Marker
+        key={parking.id}
+        id={parking.id}
+        coordinate={calculateMarkerPosition(parking.coordinates)}
+        parkingType={parking.parkingType}
+        numOfPlaces={parking.numOfPlaces}
+        centerOffset={markerOffset}
+        cluster
+        onPress={this.handleParkingSelect(parking)}
+      >
+        <ImageBackground style={markerStyles.marker} source={ICON_MAP[parking.parkingType]}>
+          <Text style={markerTextStyles[parking.parkingType]}>{parking.numOfPlaces}</Text>
+        </ImageBackground>
+      </Marker>
+    ))
+
+    const mapPolygons = getParkingPolygons(visibleParkings).map(parking => (
+      <Polygon
+        tappable
+        key={parking.id}
+        coordinates={parking.coordinates}
+        strokeColor={BORDER_COLOR_MAP[parking.parkingType]}
+        fillColor={FILL_COLOR_MAP[parking.parkingType]}
+        strokeWidth={1.5}
+        onPress={this.handleParkingSelect(parking)}
+      />
+    ))
+
     return (
       <Map
         style={{ flex: 1, alignSelf: 'stretch' }}
