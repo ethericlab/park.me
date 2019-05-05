@@ -38,4 +38,3 @@ export type ParkingDetails = {
   features: Feature[],
   location: Location
 }
-
