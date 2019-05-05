@@ -1,3 +1,6 @@
+import { ParkingType } from '../constants'
+import { LatLng } from 'react-native-maps'
+
 export type DateType = 'start' | 'end'
 
 export type Feature =
@@ -22,26 +25,29 @@ export type ParkingSpotOwner = {
 export type PriceModel = 'hourly' | 'daily' | 'monthly' | 'yearly'
 
 export type Location = {
-  lat: number,
+  lat: number
   lng: number
 }
 
 export type PublicParking = {
-  type: 'public',
-  // ...args
+  type: 'public'
+  id: string
+  coordinates: LatLng[]
+  parkingType: ParkingType
+  capacity: number
 }
 
 export type PrivateParking = {
-  type: 'private',
-  owner: ParkingSpotOwner,
-  address: string,
+  type: 'private'
+  owner: ParkingSpotOwner
+  address: string
   pricing: {
-    model: PriceModel,
-    price: number,
+    model: PriceModel
+    price: number
     currency: string
-  }[],
-  description: string,
-  features: Feature[],
+  }[]
+  description: string
+  features: Feature[]
   location: Location
 }
 

@@ -10,6 +10,7 @@ import parkingsLocation from '../../backend/parkings-location.json'
 import { ParkingType } from '../../constants'
 import SearchBar from "../../views/SearchBar";
 import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
+import {PrivateParking} from "../../types/common";
 
 // Ids of parking to rerender
 const visibleParkings = Object.keys(parkingsLocation)
@@ -78,7 +79,7 @@ type Props = {
 } & InjectedBookingProps
 
 class MainView extends React.Component<Props> {
-  handleParkingSelect = (parking: any) => () => {
+  handleParkingSelect = (parking: PrivateParking) => () => {
     this.props.booking.setSelectedParking(parking)
   }
 
