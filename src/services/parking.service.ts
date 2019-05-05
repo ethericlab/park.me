@@ -1,6 +1,6 @@
 import parkingLocations from '../backend/parkings-location.json'
 import { ParkingType } from '../constants'
-import {PrivateParking, PublicParking} from "../types/common";
+import { PrivateParking, PublicParking } from '../types/common'
 
 const zoneToParkingMap = {
   1: ParkingType.RESIDENTS,
