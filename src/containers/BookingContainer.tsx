@@ -1,18 +1,20 @@
 import React from 'react'
-import { Feature, Features } from '../types/common'
+import {Feature, Features, ParkingPlace} from '../types/common'
 
 const BookingContext = React.createContext<State>({} as any)
 
 type State = {
   bookingStart: Date | null
   bookingEnd: Date | null
-  filters: Features
+  filters: Features,
+  selectedParking: ParkingPlace | null
 } & BookingAPI
 
 type BookingAPI = {
   toggleFeature: (feature: Feature) => void
   setStartDate: (date: Date) => void
   setEndDate: (date: Date) => void
+  setSelectedParking: (parking: ParkingPlace) => void
 }
 
 export type InjectedBookingProps = {
@@ -29,6 +31,7 @@ export class BookingContainerProvider extends React.Component<{}, State> {
     }))
   setStartDate = (date: Date) => this.setState({ bookingStart: date })
   setEndDate = (date: Date) => this.setState({ bookingEnd: date })
+  setSelectedParking = (parking: ParkingPlace | null) => this.setState({ selectedParking: parking })
 
   state: State = {
     bookingEnd: new Date(),
@@ -45,10 +48,12 @@ export class BookingContainerProvider extends React.Component<{}, State> {
       gate: false,
       lit: false
     },
+    selectedParking: null,
 
     toggleFeature: this.toggleFeature,
     setStartDate: this.setStartDate,
-    setEndDate: this.setEndDate
+    setEndDate: this.setEndDate,
+    setSelectedParking: this.setSelectedParking
   }
 
   render() {

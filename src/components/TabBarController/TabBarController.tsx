@@ -5,29 +5,32 @@ import MenuItem from '../../views/MenuItem'
 import MainView from '../MainView/MainView'
 import FilterView from '../FilterView/FilterView'
 import { View } from 'react-native'
-import ParkingDetailsView from "../ParkingDetailsView/ParkingDetailsView";
-import {ParkingDetails} from "../../types/common";
+import ParkingDetailsView from '../ParkingDetailsView/ParkingDetailsView'
+import {ParkingPlace, PrivateParking} from '../../types/common'
 
-const mockParkingDetails: ParkingDetails = {
+const mockParkingDetails: PrivateParking = {
+  type: 'private',
   owner: {
     name: 'Andriy Privalov',
     verified: true
   },
   address: 'Banskobystricka 10',
   location: {
-    lat: 50.099230,
+    lat: 50.09923,
     lng: 14.392518
   },
   features: ['instant', 'night', 'charge', 'cover'],
   description: 'A parking spot in an underground garage',
-  pricing: [{
-    model: 'hourly',
-    currency: 'CZK',
-    price: 60
-  }]
+  pricing: [
+    {
+      model: 'hourly',
+      currency: 'CZK',
+      price: 60
+    }
+  ]
 }
 
-type AppState = 'map' | 'properties' | 'messages' | 'profile' | 'settings'
+type AppState = 'map' | 'booking' | 'properties' | 'messages' | 'profile' | 'settings'
 
 type State = {
   activeState: AppState
@@ -50,6 +53,10 @@ class TabBarController extends React.Component<{}, State> {
     })
   }
 
+  setAppState = (state: AppState) => {
+    this.setState({ activeState: state })
+  }
+
   render() {
     const { activeState, isBottomViewOpen } = this.state
     let currentMainView: ReactNode = null
@@ -59,6 +66,9 @@ class TabBarController extends React.Component<{}, State> {
       case 'map':
         currentMainView = <MainView />
         // currentBottomView = <FilterView closeBottomView={this.toggleBottomView} />
+        currentBottomView = <FilterView closeBottomView={this.toggleBottomView} />
+        break
+      case 'booking':
         currentBottomView = <ParkingDetailsView details={mockParkingDetails} />
         break
       case 'properties':

@@ -1,14 +1,14 @@
 import React from 'react'
-import {DateType, Features, ParkingDetails} from '../../types/common'
+import {DateType, Features, ParkingPlace, PrivateParking, PublicParking} from '../../types/common'
 import DateRangeSelect from '../DateRangeSelect/DateRangeSelect'
 import { Divider } from '../../views/Common.styled'
 import { View } from 'react-native'
 import * as s from './ParkingDetailsView.styled'
 import SmallFeatureItem from '../../views/SmallFeatureItem'
 import Button from '../../views/Button'
-import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
+import { InjectedBookingProps, withBooking } from '../../containers/BookingContainer'
 
-const formatPricing = (pricing: ParkingDetails['pricing'][0]) => {
+const formatPricing = (pricing: PrivateParking['pricing'][0]) => {
   let modelText
   switch (pricing.model) {
     case 'hourly':
@@ -28,7 +28,7 @@ const formatPricing = (pricing: ParkingDetails['pricing'][0]) => {
 }
 
 type Props = {
-  details: ParkingDetails
+  details: ParkingPlace
 } & InjectedBookingProps
 
 class ParkingDetailsView extends React.Component<Props> {
@@ -40,28 +40,32 @@ class ParkingDetailsView extends React.Component<Props> {
     }
   }
 
-  render() {
-    const { details, booking } = this.props
+  renderPublicParking(parking: PublicParking): React.ReactNode {
+    return null
+  }
+
+  renderPrivateParking(parking: PrivateParking): React.ReactNode {
+    const { booking } = this.props
     return (
       <s.Container>
         <View style={{ flexDirection: 'row' }}>
           <s.Avatar source={require('../../icons/avatar.png')} />
           <View style={{ marginLeft: 10, flex: 1 }}>
             <View style={{ flexDirection: 'row' }}>
-              <s.OwnerName>{details.owner.name}</s.OwnerName>
-              {details.owner.verified && <s.Verified style={{ marginLeft: 5 }} />}
+              <s.OwnerName>{parking.owner.name}</s.OwnerName>
+              {parking.owner.verified && <s.Verified style={{ marginLeft: 5 }} />}
             </View>
-            <s.ParkingAddress style={{ marginTop: 5 }}>{details.address}</s.ParkingAddress>
+            <s.ParkingAddress style={{ marginTop: 5 }}>{parking.address}</s.ParkingAddress>
           </View>
           <s.PricingContainer>
-            <s.PricingText>{formatPricing(details.pricing[0])}</s.PricingText>
+            <s.PricingText>{formatPricing(parking.pricing[0])}</s.PricingText>
           </s.PricingContainer>
         </View>
-        <s.ParkingDescription style={{ marginTop: 15 }}>{details.description}</s.ParkingDescription>
+        <s.ParkingDescription style={{ marginTop: 15 }}>{parking.description}</s.ParkingDescription>
         <Divider />
         <View style={{ flexDirection: 'row' }}>
           <s.FeatureContainer style={{ marginRight: 10 }}>
-            {details.features.slice(0, 4).map(feature => (
+            {parking.features.slice(0, 4).map(feature => (
               <SmallFeatureItem icon={feature} key={feature} />
             ))}
           </s.FeatureContainer>
@@ -70,10 +74,26 @@ class ParkingDetailsView extends React.Component<Props> {
           </s.DistanceContainer>
         </View>
         <Divider />
-        <DateRangeSelect onDatePicked={this.handleDatePicked} startDate={booking.bookingStart} endDate={booking.bookingEnd} />
+        <DateRangeSelect
+          onDatePicked={this.handleDatePicked}
+          startDate={booking.bookingStart}
+          endDate={booking.bookingEnd}
+        />
         <Button text={'Book'} disabled={true} style={{ marginTop: 30 }} />
       </s.Container>
     )
+  }
+
+  render() {
+    const { details } = this.props
+    switch (details.type) {
+      case 'public':
+        return this.renderPublicParking(details)
+      case 'private':
+        return this.renderPrivateParking(details)
+    }
+
+    return null
   }
 }
 

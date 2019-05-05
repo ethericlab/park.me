@@ -9,6 +9,7 @@ import { getParkingPolygons } from '../../services'
 import parkingsLocation from '../../backend/parkings-location.json'
 import { ParkingType } from '../../constants'
 import SearchBar from "../../views/SearchBar";
+import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
 
 // Ids of parking to rerender
 const visibleParkings = Object.keys(parkingsLocation)
@@ -74,11 +75,11 @@ function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
 
 type Props = {
   onParkingSelect: (parking: any) => void
-}
+} & InjectedBookingProps
 
 class MainView extends React.Component<Props> {
   handleParkingSelect = (parking: any) => () => {
-    this.props.onParkingSelect(parking)
+    this.props.booking.setSelectedParking(parking)
   }
 
   render() {
@@ -138,4 +139,4 @@ class MainView extends React.Component<Props> {
   }
 }
 
-export default MainView
+export default withBooking(MainView)
