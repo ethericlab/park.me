@@ -11,6 +11,16 @@ export const Avatar = styled.Image`
   overflow: hidden;
 `
 
+export const ParkingAvatar = styled.View`
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #0044f1;
+  align-items: center;
+  justify-content: center;
+`
+
 export const OwnerName = styled.Text`
   font-family: Galano Grotesque Alt DEMO;
   font-size: 15px;

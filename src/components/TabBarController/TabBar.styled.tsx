@@ -31,24 +31,28 @@ export const ExpanderBar = styled.View`
 
 export const BottomViewContainer: React.FunctionComponent<{
   open: boolean
-  style?: StyleProp<ViewStyle>
-}> = props => (
-  <View
-    style={[
-      {
-        height: props.open ? 480 : 85,
-        transform: [
-          {
-            translateY: props.open ? 395 : 0
-          }
-        ]
-      },
-      props.style
-    ]}
-  >
-    {props.children}
-  </View>
-)
+  style?: StyleProp<ViewStyle>,
+  as: React.ComponentType
+}> = ({ open, style, children, as = View}) => {
+  const Tag = as
+  return (
+    <Tag
+      style={[
+        {
+          height: open ? 480 : 85,
+          transform: [
+            {
+              translateY: open ? 395 : 0
+            }
+          ]
+        },
+        style
+      ]}
+    >
+      {children}
+    </Tag>
+  );
+}
 
 // export const BottomViewContainer: any = styled.View.attrs<{ open: boolean }>({
 //   style: {

@@ -75,11 +75,14 @@ function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
   return { latitude: Number(center.latitude), longitude: Number(center.longitude) }
 }
 
-type Props = {} & InjectedBookingProps
+type Props = {
+  openBottomPanel: () => void
+} & InjectedBookingProps
 
 class MainView extends React.Component<Props> {
   handleParkingSelect = (parking: PrivateParking | PublicParking) => () => {
     this.props.booking.setSelectedParking(parking)
+    this.props.openBottomPanel()
   }
 
   render() {

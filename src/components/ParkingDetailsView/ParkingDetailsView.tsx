@@ -1,8 +1,8 @@
 import React from 'react'
-import {DateType, Features, ParkingPlace, PrivateParking, PublicParking} from '../../types/common'
+import { DateType, ParkingPlace, PrivateParking, PublicParking } from '../../types/common'
 import DateRangeSelect from '../DateRangeSelect/DateRangeSelect'
 import { Divider } from '../../views/Common.styled'
-import { View } from 'react-native'
+import { View, Text } from 'react-native'
 import * as s from './ParkingDetailsView.styled'
 import SmallFeatureItem from '../../views/SmallFeatureItem'
 import Button from '../../views/Button'
@@ -41,7 +41,49 @@ class ParkingDetailsView extends React.Component<Props> {
   }
 
   renderPublicParking(parking: PublicParking): React.ReactNode {
-    return null
+    const { booking } = this.props
+    return (
+      <s.Container>
+        <View style={{ flexDirection: 'row' }}>
+          <s.ParkingAvatar>
+            <Text>R</Text>
+          </s.ParkingAvatar>
+          <View style={{ marginLeft: 10, flex: 1 }}>
+            <View style={{ flexDirection: 'row' }}>
+              <s.OwnerName>Parking {parking.id}</s.OwnerName>
+            </View>
+            <s.ParkingAddress style={{ marginTop: 5 }}>loading..</s.ParkingAddress>
+          </View>
+          <s.PricingContainer>
+            <s.PricingText>60 CZK/h</s.PricingText>
+          </s.PricingContainer>
+        </View>
+        <s.ParkingDescription style={{ marginTop: 15 }}>
+          Only holders of a valid parking permit may park in this zone. Others may use it for up to
+          3 hours.
+        </s.ParkingDescription>
+        <Divider />
+        <View style={{ flexDirection: 'row' }}>
+          <s.DistanceContainer style={{ marginRight: 15 }}>
+            <s.DistanceText>{parking.capacity} places available</s.DistanceText>
+          </s.DistanceContainer>
+          <s.DistanceContainer style={{ marginLeft: 15 }}>
+            <s.DistanceText>350m</s.DistanceText>
+          </s.DistanceContainer>
+        </View>
+        <Divider />
+        <DateRangeSelect
+          onDatePicked={this.handleDatePicked}
+          startDate={booking.bookingStart}
+          endDate={booking.bookingEnd}
+        />
+        <Button
+          text={'Book'}
+          disabled={!(booking.selectedParking && booking.bookingStart && booking.bookingEnd)}
+          style={{ marginTop: 30 }}
+        />
+      </s.Container>
+    )
   }
 
   renderPrivateParking(parking: PrivateParking): React.ReactNode {
@@ -79,7 +121,11 @@ class ParkingDetailsView extends React.Component<Props> {
           startDate={booking.bookingStart}
           endDate={booking.bookingEnd}
         />
-        <Button text={'Book'} disabled={true} style={{ marginTop: 30 }} />
+        <Button
+          text={'Book'}
+          disabled={!(booking.selectedParking && booking.bookingStart && booking.bookingEnd)}
+          style={{ marginTop: 30 }}
+        />
       </s.Container>
     )
   }

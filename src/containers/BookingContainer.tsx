@@ -14,7 +14,7 @@ type BookingAPI = {
   toggleFeature: (feature: Feature) => void
   setStartDate: (date: Date) => void
   setEndDate: (date: Date) => void
-  setSelectedParking: (parking: ParkingPlace) => void
+  setSelectedParking: (parking: ParkingPlace | null) => void
 }
 
 export type InjectedBookingProps = {
@@ -34,8 +34,8 @@ export class BookingContainerProvider extends React.Component<{}, State> {
   setSelectedParking = (parking: ParkingPlace | null) => this.setState({ selectedParking: parking })
 
   state: State = {
-    bookingEnd: new Date(),
-    bookingStart: new Date(),
+    bookingEnd: null,
+    bookingStart: null,
     filters: {
       heated: false,
       night: false,

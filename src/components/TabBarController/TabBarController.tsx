@@ -4,36 +4,38 @@ import * as s from './TabBar.styled'
 import MenuItem from '../../views/MenuItem'
 import MainView from '../MainView/MainView'
 import FilterView from '../FilterView/FilterView'
-import { View } from 'react-native'
+import {Animated, View} from 'react-native'
 import ParkingDetailsView from '../ParkingDetailsView/ParkingDetailsView'
 import { PrivateParking } from '../../types/common'
 import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
 
-const mockParkingDetails: PrivateParking = {
-  type: 'private',
-  owner: {
-    name: 'Andriy Privalov',
-    verified: true
-  },
-  address: 'Banskobystricka 10',
-  location: {
-    lat: 50.09923,
-    lng: 14.392518
-  },
-  features: ['instant', 'night', 'charge', 'cover'],
-  description: 'A parking spot in an underground garage',
-  pricing: [
-    {
-      model: 'hourly',
-      currency: 'CZK',
-      price: 60
-    }
-  ]
-}
+// const mockParkingDetails: PrivateParking = {
+//   id: "",
+//   type: 'private',
+//   owner: {
+//     name: 'Andriy Privalov',
+//     verified: true
+//   },
+//   address: 'Banskobystricka 10',
+//   location: {
+//     lat: 50.09923,
+//     lng: 14.392518
+//   },
+//   features: ['instant', 'night', 'charge', 'cover'],
+//   description: 'A parking spot in an underground garage',
+//   pricing: [
+//     {
+//       model: 'hourly',
+//       currency: 'CZK',
+//       price: 60
+//     }
+//   ]
+// }
 
 type AppState = 'map' | 'booking' | 'properties' | 'messages' | 'profile' | 'settings'
 
 type State = {
+  animate: Animated.Value
   activeState: AppState
   isBottomViewOpen: boolean
 }
@@ -42,6 +44,7 @@ type Props = {} & InjectedBookingProps
 
 class TabBarController extends React.Component<Props, State> {
   state: State = {
+    animate: new Animated.Value(0),
     activeState: 'map',
     isBottomViewOpen: false
   }
@@ -49,11 +52,21 @@ class TabBarController extends React.Component<Props, State> {
   handleMenuClick = (state: AppState) => () => this.setState({ activeState: state })
 
   toggleBottomView = () => {
-    console.log('toggleBottomView')
+    const { booking } = this.props
+    const { isBottomViewOpen } = this.state
+    if (isBottomViewOpen && booking.selectedParking) {
+      booking.setSelectedParking(null)
+    }
     this.setState(({ isBottomViewOpen }) => {
-      // Animated.spring(this.state.openAnim, { toValue: isBottomPanelOpen ? 1 : 0 }).start()
+      Animated.spring(this.state.animate, { toValue: isBottomViewOpen ? 0 : 1 }).start()
       return { isBottomViewOpen: !isBottomViewOpen }
     })
+  }
+
+  openBottomPanel = () => {
+    if (!this.state.isBottomViewOpen) {
+      this.toggleBottomView()
+    }
   }
 
   setAppState = (state: AppState) => {
@@ -62,13 +75,13 @@ class TabBarController extends React.Component<Props, State> {
 
   render() {
     const { booking } = this.props
-    const { activeState, isBottomViewOpen } = this.state
+    const { animate, activeState, isBottomViewOpen } = this.state
     let currentMainView: ReactNode = null
     let currentBottomView: ReactNode = null
 
     switch (activeState) {
       case 'map':
-        currentMainView = <MainView />
+        currentMainView = <MainView openBottomPanel={this.openBottomPanel}/>
         if (booking.selectedParking) {
           currentBottomView = <ParkingDetailsView details={booking.selectedParking} />
         } else {
@@ -86,6 +99,11 @@ class TabBarController extends React.Component<Props, State> {
       case 'settings':
         break
     }
+
+    // const translateYForBottomView = animate.interpolate({
+    //   inputRange: [0, 1],
+    //   outputRange: [395, 0]
+    // })
 
     return (
       <DismissKeyboard>
