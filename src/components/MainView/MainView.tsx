@@ -46,7 +46,7 @@ const markerTextStyles = StyleSheet.create({
     fontSize: 15,
     alignItems: 'center',
     textAlign: 'center',
-    fontFamily: 'galano-grotesque-alt-bold',
+    fontFamily: 'Galano Grotesque Alt DEMO',
     color: '#0349E8'
   },
   [MIXED]: {
@@ -57,7 +57,7 @@ const markerTextStyles = StyleSheet.create({
     fontSize: 15,
     alignItems: 'center',
     textAlign: 'center',
-    fontFamily: 'galano-grotesque-alt-bold',
+    fontFamily: 'Galano Grotesque Alt DEMO',
     color: '#CD00A0'
   }
 })
