@@ -1,5 +1,4 @@
 import React from 'react'
-import { LinearGradient, MapView } from 'expo'
 import { Animated, ImageBackground } from 'react-native'
 import * as s from './MainPage.styled'
 import MenuItem from './sub-components/MenuItem'
@@ -10,6 +9,7 @@ import { formatDateTime } from './MainPage.utils'
 import Button from '../../views/Button'
 import SearchBar from './sub-components/SearchBar'
 import DismissKeyboard from '../../containers/DismissKeyboard'
+import MapView from "../../components/MapView/MapView";
 
 type DateTimePickerType = 'start' | 'end'
 
@@ -124,15 +124,7 @@ class MainPage extends React.Component<{}, State> {
       <DismissKeyboard>
         <s.Container>
           <s.MapContainer>
-            <MapView
-              style={{ flex: 1, alignSelf: 'stretch' }}
-              initialRegion={{
-                latitude: 37.78825,
-                longitude: -122.4324,
-                latitudeDelta: 0.0922,
-                longitudeDelta: 0.0421
-              }}
-            />
+            <MapView />
             <ImageBackground
               source={require('../../icons/search_gradient.png')}
               style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 160 }}
