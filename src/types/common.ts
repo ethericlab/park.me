@@ -38,6 +38,7 @@ export type PublicParking = {
 }
 
 export type PrivateParking = {
+  id: string
   type: 'private'
   owner: ParkingSpotOwner
   address: string

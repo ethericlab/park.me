@@ -5,12 +5,12 @@ import { Marker, Polygon } from 'react-native-maps'
 import { ImageBackground, Text, StyleSheet } from 'react-native'
 import { LatLng, MapEvent } from 'expo'
 import { getCenter } from 'geolib'
-import { getParkingPolygons } from '../../services'
+import { getParkingPolygons, getPrivateParkings } from '../../services'
 import parkingsLocation from '../../backend/parkings-location.json'
 import { ParkingType } from '../../constants'
-import SearchBar from "../../views/SearchBar";
-import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
-import {PrivateParking} from "../../types/common";
+import SearchBar from '../../views/SearchBar'
+import { InjectedBookingProps, withBooking } from '../../containers/BookingContainer'
+import { PrivateParking, PublicParking } from '../../types/common'
 
 // Ids of parking to rerender
 const visibleParkings = Object.keys(parkingsLocation)
@@ -31,7 +31,8 @@ const FILL_COLOR_MAP = {
 }
 const ICON_MAP = {
   [MIXED]: require('../../icons/ic_pin_mixed.png'),
-  [RESIDENTS]: require('../../icons/ic_pin_resident.png')
+  [RESIDENTS]: require('../../icons/ic_pin_resident.png'),
+  [PEER_TO_PEER]: require('../../icons/ic_pin_p2p.png')
 }
 const markerStyles = StyleSheet.create({
   marker: {
@@ -77,7 +78,7 @@ function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
 type Props = {} & InjectedBookingProps
 
 class MainView extends React.Component<Props> {
-  handleParkingSelect = (parking: PrivateParking) => () => {
+  handleParkingSelect = (parking: PrivateParking | PublicParking) => () => {
     this.props.booking.setSelectedParking(parking)
   }
 
@@ -107,6 +108,18 @@ class MainView extends React.Component<Props> {
         onPress={this.handleParkingSelect(parking)}
       />
     ))
+
+    const mapPrivateMarkers = getPrivateParkings().map(parking => (
+      <Marker
+        key={parking.id}
+        coordinate={{ latitude: parking.location.lat, longitude: parking.location.lng }}
+        centerOffset={markerOffset}
+        cluster={true}
+        onPress={this.handleParkingSelect(parking)}
+      >
+        <ImageBackground style={markerStyles.marker} source={ICON_MAP[ParkingType.PEER_TO_PEER]} />
+      </Marker>
+    ))
     return (
       <>
         <MapView
@@ -127,6 +140,7 @@ class MainView extends React.Component<Props> {
         >
           {mapPolygons}
           {mapMarkers}
+          {mapPrivateMarkers}
         </MapView>
         <ImageBackground
           source={require('../../icons/search_gradient.png')}
