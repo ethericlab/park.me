@@ -9,7 +9,7 @@ type Props = {
   id: string
   coordinates: Array<LatLng>
   parkingType: ParkingType
-  numOfPlaces: number
+  capacity: number
   onTap: (id: string) => void
 }
 
@@ -34,7 +34,7 @@ const ParkingArea: FunctionComponent<Props> = ({
   id,
   coordinates,
   parkingType,
-  numOfPlaces,
+  capacity,
   onTap
 }) => {
   const handlePress = (event: MapEvent) => {
@@ -56,7 +56,7 @@ const ParkingArea: FunctionComponent<Props> = ({
       />
       <Marker coordinate={calculateMarkerPosition(coordinates)} cluster>
         <ImageBackground source={require('../../icons/ic_pin.png')} style={styles.marker}>
-          <Text style={styles.markerText}>{numOfPlaces}</Text>
+          <Text style={styles.markerText}>{capacity}</Text>
         </ImageBackground>
       </Marker>
     </>

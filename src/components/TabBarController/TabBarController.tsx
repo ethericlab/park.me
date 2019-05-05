@@ -6,7 +6,8 @@ import MainView from '../MainView/MainView'
 import FilterView from '../FilterView/FilterView'
 import { View } from 'react-native'
 import ParkingDetailsView from '../ParkingDetailsView/ParkingDetailsView'
-import {ParkingPlace, PrivateParking} from '../../types/common'
+import { PrivateParking } from '../../types/common'
+import {InjectedBookingProps, withBooking} from "../../containers/BookingContainer";
 
 const mockParkingDetails: PrivateParking = {
   type: 'private',
@@ -37,7 +38,9 @@ type State = {
   isBottomViewOpen: boolean
 }
 
-class TabBarController extends React.Component<{}, State> {
+type Props = {} & InjectedBookingProps
+
+class TabBarController extends React.Component<Props, State> {
   state: State = {
     activeState: 'map',
     isBottomViewOpen: false
@@ -58,6 +61,7 @@ class TabBarController extends React.Component<{}, State> {
   }
 
   render() {
+    const { booking } = this.props
     const { activeState, isBottomViewOpen } = this.state
     let currentMainView: ReactNode = null
     let currentBottomView: ReactNode = null
@@ -65,11 +69,13 @@ class TabBarController extends React.Component<{}, State> {
     switch (activeState) {
       case 'map':
         currentMainView = <MainView />
-        // currentBottomView = <FilterView closeBottomView={this.toggleBottomView} />
-        currentBottomView = <FilterView closeBottomView={this.toggleBottomView} />
+        if (booking.selectedParking) {
+          currentBottomView = <ParkingDetailsView details={booking.selectedParking} />
+        } else {
+          currentBottomView = <FilterView closeBottomView={this.toggleBottomView} />
+        }
         break
       case 'booking':
-        currentBottomView = <ParkingDetailsView details={mockParkingDetails} />
         break
       case 'properties':
         break
@@ -144,4 +150,4 @@ class TabBarController extends React.Component<{}, State> {
   }
 }
 
-export default TabBarController
+export default withBooking(TabBarController)

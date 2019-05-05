@@ -74,9 +74,7 @@ function calculateMarkerPosition(coordinates: Array<LatLng>): LatLng {
   return { latitude: Number(center.latitude), longitude: Number(center.longitude) }
 }
 
-type Props = {
-  onParkingSelect: (parking: any) => void
-} & InjectedBookingProps
+type Props = {} & InjectedBookingProps
 
 class MainView extends React.Component<Props> {
   handleParkingSelect = (parking: PrivateParking) => () => {
@@ -93,7 +91,7 @@ class MainView extends React.Component<Props> {
         onPress={this.handleParkingSelect(parking)}
       >
         <ImageBackground style={markerStyles.marker} source={ICON_MAP[parking.parkingType]}>
-          <Text style={markerTextStyles[parking.parkingType]}>{parking.numOfPlaces}</Text>
+          <Text style={markerTextStyles[parking.parkingType]}>{parking.capacity}</Text>
         </ImageBackground>
       </Marker>
     ))

@@ -16,14 +16,14 @@ export const getParkingPolygons = (ids: string[]): PublicParking[] => {
       longitude
     }))
     const parkingType: ParkingType = (zoneToParkingMap as any)[parking.properties['TYPZONY']]
-    const numOfPlaces = parking.properties['PS_ZPS']
+    const capacity = parking.properties['PS_ZPS']
 
     return {
       type: 'public',
       id: parking.properties['ZPS_ID'],
       coordinates,
       parkingType,
-      capacity: numOfPlaces
+      capacity: capacity
     }
   })
 }
