@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7549018c-9afb-4b79-ad4c-0e913af4f87f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/backend/parkings-location.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/backend/parkings.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MapView/MapView.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ParkingArea/ParkingArea.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ParkingArea/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/ic_pin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/parking.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DateRangeSelect/DateRangeSelect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterView/FilterView.styled.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterView/FilterView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterView/FilterView.utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MainView/MainView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/common.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MapView/MapView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/MainPage.styled.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabBarController/TabBar.styled.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/MainPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/MainPage.utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.styled.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/sub-components/FeatureItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FeatureItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/sub-components/MenuItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MenuItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/sub-components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchBar.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,10 +34,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/DateRangeSelect/DateRangeSelect.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+            <state relative-caret-position="537">
+              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.styled.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-917">
+              <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -42,46 +67,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MapView/MapView.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.utils.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="464">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ParkingArea/ParkingArea.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="46" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -122,20 +123,35 @@
         <option value="$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.styled.tsx" />
         <option value="$PROJECT_DIR$/src/pages/Main/sub-components/MenuItem.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/pages/Main/MainPage.styled.tsx" />
         <option value="$PROJECT_DIR$/src/views/DateTimeSelect.tsx" />
-        <option value="$PROJECT_DIR$/src/pages/Main/MainPage.utils.ts" />
         <option value="$PROJECT_DIR$/src/views/DateTimeValue.tsx" />
         <option value="$PROJECT_DIR$/src/views/Button.tsx" />
         <option value="$PROJECT_DIR$/src/pages/Main/sub-components/FeatureItem.tsx" />
         <option value="$PROJECT_DIR$/src/containers/DismissKeyboard.tsx" />
         <option value="$PROJECT_DIR$/src/pages/Main/sub-components/SearchBar.tsx" />
-        <option value="$PROJECT_DIR$/App.tsx" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.js" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/components/MapView/MapView.tsx" />
         <option value="$PROJECT_DIR$/src/components/ParkingArea/ParkingArea.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/Main/sub-components/BottomNav.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/Main/sub-components/BottomPane.tsx" />
+        <option value="$PROJECT_DIR$/src/views/MenuItem.tsx" />
+        <option value="$PROJECT_DIR$/src/views/FeatureItem.tsx" />
+        <option value="$PROJECT_DIR$/App.tsx" />
+        <option value="$PROJECT_DIR$/src/components/FilterView/FilterView.styled.ts" />
+        <option value="$PROJECT_DIR$/src/pages/Main/MainPage.utils.ts" />
+        <option value="$PROJECT_DIR$/src/components/FilterView/FilterView.utils.ts" />
         <option value="$PROJECT_DIR$/src/pages/Main/MainPage.tsx" />
+        <option value="$PROJECT_DIR$/src/pages/Main/MainPage.styled.tsx" />
+        <option value="$PROJECT_DIR$/src/views/SearchBar.tsx" />
+        <option value="$PROJECT_DIR$/src/components/MapView/MainView.tsx" />
+        <option value="$PROJECT_DIR$/src/components/TabBarController/TabBar.styled.ts" />
+        <option value="$PROJECT_DIR$/src/components/TabBarController/TabBar.styled.tsx" />
+        <option value="$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx" />
+        <option value="$PROJECT_DIR$/src/types/common.ts" />
+        <option value="$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx" />
+        <option value="$PROJECT_DIR$/src/components/FilterView/FilterView.tsx" />
+        <option value="$PROJECT_DIR$/src/components/DateRangeSelect/DateRangeSelect.tsx" />
       </list>
     </option>
   </component>
@@ -198,14 +214,35 @@
               <item name="park.me" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MapView" type="462c0819:PsiDirectoryNode" />
+              <item name="DateRangeSelect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
               <item name="park.me" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ParkingArea" type="462c0819:PsiDirectoryNode" />
+              <item name="FilterView" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="park.me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainView" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="park.me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ParkingDetailsView" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
+              <item name="park.me" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="TabBarController" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
@@ -217,28 +254,7 @@
               <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
               <item name="park.me" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="park.me" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="park.me" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-              <item name="sub-components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
-              <item name="park.me" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="types" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="park.me" type="b2602c69:ProjectViewProjectNode" />
@@ -281,6 +297,8 @@
       <recent name="$PROJECT_DIR$/src/pages/Main/sub-components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/ParkingDetailsView" />
+      <recent name="$PROJECT_DIR$/src/views" />
       <recent name="$PROJECT_DIR$/src/pages/Main" />
       <recent name="$PROJECT_DIR$/src/pages/main" />
     </key>
@@ -346,7 +364,7 @@
       <workItem from="1556977871832" duration="6235000" />
       <workItem from="1556986072284" duration="44000" />
       <workItem from="1556986127759" duration="8000" />
-      <workItem from="1556986140714" duration="26293000" />
+      <workItem from="1556986140714" duration="32269000" />
     </task>
     <task id="LOCAL-00001" summary="Add MainScreen and icons">
       <created>1557029550867</created>
@@ -355,11 +373,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557029550867</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;App.tsx&#10;#&#9;tsconfig.json">
+      <created>1557031794736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557031794736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32580000" />
+    <option name="totallyTimeSpent" value="38556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -372,7 +397,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32959184" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992126" weight="0.32244897" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992126" visible="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -380,7 +405,7 @@
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007874" side_tool="true" weight="0.32244897" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4992126" weight="0.29285714" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -393,7 +418,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add MainScreen and icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add MainScreen and icons" />
+    <MESSAGE value="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;App.tsx&#10;#&#9;tsconfig.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of github.com:ethericlab/park.me&#10;&#10;# Conflicts:&#10;#&#9;App.tsx&#10;#&#9;tsconfig.json" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/rn-cli.config.js" />
@@ -451,47 +477,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.styled.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/icons/24h.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/MenuItem.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.utils.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -512,57 +504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/FeatureItem.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/DismissKeyboard.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Button.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/SearchBar.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.styled.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -596,22 +541,191 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MapView/MapView.tsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.styled.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="320">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="126" column="23" lean-forward="true" selection-start-line="126" selection-start-column="23" selection-end-line="126" selection-end-column="23" />
+        <state relative-caret-position="318">
+          <caret line="192" column="9" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.utils.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.styled.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomPane.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="104" column="18" lean-forward="true" selection-start-line="26" selection-start-column="2" selection-end-line="104" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/sub-components/BottomNav.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Main/MainPage.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/styled-components/native.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="203" column="2" selection-start-line="203" selection-start-column="2" selection-end-line="203" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainView/MainView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/styled-components/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/MenuItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/FeatureItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/SearchBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TabBarController/TabBar.styled.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/TabBarController/TabBarController.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="68" column="14" lean-forward="true" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types/common.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.utils.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.styled.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ParkingDetailsView/ParkingDetailsView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FilterView/FilterView.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-917">
+          <caret line="79" column="21" lean-forward="true" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DateRangeSelect/DateRangeSelect.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
