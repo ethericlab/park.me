@@ -1,23 +1,27 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { MapView } from 'expo'
+import { StyleSheet } from 'react-native'
+import MainPage from './src/pages/Main/MainPage'
+import {Font} from "expo";
 
-export default class App extends React.Component {
+type State = {
+  initialized: boolean
+}
+
+export default class App extends React.Component<{}, State> {
+  state = {
+    initialized: false
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      'galano-grotesque-alt-bold': require('./assets/fonts/GalanoGrotesqueAltDEMO-Bold.ttf'),
+    });
+    this.setState({ initialized: true })
+  }
+
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <MapView
-          style={{ flex: 1, alignSelf: 'stretch' }}
-          initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421
-          }}
-        />
-      </View>
-    )
+    const { initialized } = this.state
+    return initialized ? <MainPage /> : null
   }
 }
 

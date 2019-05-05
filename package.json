@@ -9,11 +9,14 @@
   "dependencies": {
     "expo": "^32.0.0",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-modal-datetime-picker": "^7.4.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@types/expo": "^32.0.13",
     "@types/react-native": "^0.57.51",
+    "@types/styled-components": "^4.1.14",
     "babel-preset-expo": "^5.0.0",
     "prettier": "^1.17.0",
     "typescript": "^3.4.5"
