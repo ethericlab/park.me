@@ -22,16 +22,16 @@ const StyledImage = styled.Image`
 const StyledInput = styled.TextInput`
   margin-left: 10px;
   flex: 1;
-  font-family: galano-grotesque-alt-bold;
+  font-family: Galano Grotesque Alt DEMO;
   font-size: 15px;
   line-height: 22px;
 `
 
 const SearchBar: React.FunctionComponent = () => (
   <Container>
-    <StyledImage source={require('../../../icons/ic_search.png')} />
+    <StyledImage source={require('../icons/ic_search.png')} />
     <StyledInput />
-    <StyledImage source={require('../../../icons/ic_gps.png')} />
+    <StyledImage source={require('../icons/ic_gps.png')} />
   </Container>
 )
 

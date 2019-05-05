@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import MainPage from './src/pages/Main/MainPage'
-import {Font} from "expo";
+import { Font } from 'expo'
+import TabBarController from './src/components/TabBarController/TabBarController'
+import { BookingContainerProvider } from './src/containers/BookingContainer'
 
 type State = {
   initialized: boolean
@@ -14,14 +15,19 @@ export default class App extends React.Component<{}, State> {
 
   async componentDidMount() {
     await Font.loadAsync({
-      'galano-grotesque-alt-bold': require('./assets/fonts/GalanoGrotesqueAltDEMO-Bold.ttf'),
-    });
+      'Galano Grotesque Alt DEMO': require('./assets/fonts/GalanoGrotesqueAltDEMO-Bold.ttf'),
+      'Galano Grotesque DEMO': require('./assets/fonts/GalanoGrotesqueDEMO-Bold.ttf')
+    })
     this.setState({ initialized: true })
   }
 
   render() {
     const { initialized } = this.state
-    return initialized ? <MainPage /> : null
+    return initialized ? (
+      <BookingContainerProvider>
+        <TabBarController />
+      </BookingContainerProvider>
+    ) : null
   }
 }
 

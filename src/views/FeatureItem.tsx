@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import { GestureResponderEvent, Image, TouchableOpacity } from 'react-native'
+import { Image, TouchableOpacity } from 'react-native'
 
 const Container = styled.View`
   width: 55px;
@@ -8,7 +8,7 @@ const Container = styled.View`
 `
 
 const Label = styled.Text`
-  font-family: galano-grotesque-alt-bold;
+  font-family: Galano Grotesque Alt DEMO;
   font-size: 15px;
   line-height: 22px;
   flex-wrap: wrap;
@@ -25,21 +25,21 @@ const StyledView = styled.View<{ active: boolean }>`
   margin-bottom: 5px;
 `
 
-const icons = {
-  instant: require('../../../icons/flash_icon.png'),
-  cover: require('../../../icons/ic_protection.png'),
-  lit: require('../../../icons/ic_torch.png'),
-  charge: require('../../../icons/ic_plug.png'),
-  cam: require('../../../icons/ic_webcam.png'),
-  gate: require('../../../icons/ic_locker.png'),
-  guard: require('../../../icons/ic_shieldstar.png'),
-  allDay: require('../../../icons/24h.png'),
-  night: require('../../../icons/ic_moon.png'),
-  heated: require('../../../icons/ic_brightness.png')
+export const icons = {
+  instant: require('../icons/flash_icon.png'),
+  cover: require('../icons/ic_protection.png'),
+  lit: require('../icons/ic_torch.png'),
+  charge: require('../icons/ic_plug.png'),
+  cam: require('../icons/ic_webcam.png'),
+  gate: require('../icons/ic_locker.png'),
+  guard: require('../icons/ic_shieldstar.png'),
+  allDay: require('../icons/24h.png'),
+  night: require('../icons/ic_moon.png'),
+  heated: require('../icons/ic_brightness.png')
 }
 
 export type FeatureItemProps = {
-  onPress?: (event: GestureResponderEvent) => void
+  onPress?: () => void
   icon: keyof typeof icons
   label: string
   active?: boolean

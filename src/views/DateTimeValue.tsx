@@ -16,7 +16,7 @@ const Container = styled.View<{ active?: boolean }>`
 
 const Label = styled.Text`
   margin-left: 10px;
-  font-family: galano-grotesque-alt-bold;
+  font-family: Galano Grotesque Alt DEMO;
   font-size: 15px;
   line-height: 22px;
   color: #fff;

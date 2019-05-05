@@ -2,8 +2,9 @@ import React from 'react'
 import { GestureResponderEvent, StyleProp, TouchableOpacity, ViewStyle } from 'react-native'
 import styled from 'styled-components/native'
 
-const Container = styled.View<{ active?: boolean }>`
+const Container = styled.View<{ active?: boolean; disabled?: boolean }>`
   background-color: #ff9364;
+  opacity: ${({ disabled }) => (disabled ? '0.3' : '1')};
   border-radius: 6px;
   height: 55px;
   align-items: center;
@@ -12,7 +13,7 @@ const Container = styled.View<{ active?: boolean }>`
 `
 
 const Label = styled.Text`
-  font-family: galano-grotesque-alt-bold;
+  font-family: Galano Grotesque Alt DEMO;
   font-size: 18px;
   line-height: 22px;
   color: #fff;
@@ -21,12 +22,13 @@ const Label = styled.Text`
 export type ButtonProps = {
   onPress?: (event: GestureResponderEvent) => void
   text: string
+  disabled?: boolean
   style?: StyleProp<ViewStyle>
 }
 
-const Button: React.FunctionComponent<ButtonProps> = ({ onPress, text, style }) => (
-  <TouchableOpacity onPress={onPress} style={[{ width: '100%' }, style]}>
-    <Container>
+const Button: React.FunctionComponent<ButtonProps> = ({ onPress, text, style, disabled }) => (
+  <TouchableOpacity onPress={onPress} style={[{ width: '100%' }, style]} disabled={disabled}>
+    <Container disabled={disabled}>
       <Label>{text}</Label>
     </Container>
   </TouchableOpacity>

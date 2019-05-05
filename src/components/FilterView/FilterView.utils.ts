@@ -25,5 +25,5 @@ export function formatDateTime(date: Date): string {
 
   return `${shortDayNames[dayIndex]}, ${day} of ${
     monthNames[monthIndex]
-  } ${year} - ${hours}:${minutes.toString().padStart(2, '0')}`
+    } ${year} - ${hours}:${minutes.toString().padStart(2, '0')}`
 }

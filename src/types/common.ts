@@ -1,4 +1,4 @@
-export type DatePickerType = 'start' | 'end'
+export type DateType = 'start' | 'end'
 
 export type Feature =
   | 'instant'
@@ -38,3 +38,4 @@ export type ParkingDetails = {
   features: Feature[],
   location: Location
 }
+
